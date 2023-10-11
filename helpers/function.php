@@ -3,9 +3,7 @@
 session_start();
 //echo phpinfo();
 
-$db = mysqli_connect("localhost", "root", "", "kinder-shop");
-
-/* Проверка подключения */
+$db = mysqli_connect("localhost", "root", "", "kindershop");
 if (!$db) {
     die('Ошибка подключения');
 }
@@ -17,9 +15,11 @@ function login($login, $password)
     return mysqli_num_rows($result);
 }
 
+/*
 function getOrders()
 {
     global $db;
     $result = mysqli_query($db, "SELECT * FROM `orders`;");
     return mysqli_fetch_all($result, MYSQLI_ASSOC);
 }
+*/
